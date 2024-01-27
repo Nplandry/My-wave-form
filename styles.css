@@ -1,0 +1,106 @@
+
+:root {
+    --form-color: #86BBD8;
+    --primary-color: #4aa0b1;
+    --primary-color-d: #33658A;
+    --secondary--color: #F6AE2D;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    background-color: var(--primary-color-d);
+}
+
+#container {
+    padding: 40px;
+    width: 440px;
+    display: flex;
+    background-color: var(--form-color);
+    flex-flow: column wrap;
+    border-radius: 5px;
+}
+#container h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: var(--primary-color-d);
+    font-family: 'Play', sans-serif;
+}
+
+.form-container {
+    background-color: aliceblue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    position: relative;
+}
+.form-container input {
+    display: block;
+    border: none;
+    background-color: var(--form-color);
+    padding: 5px 0;
+    border-bottom: 4px solid var(--primary-color-d);
+}
+
+.form-container input:focus,
+.form-container input:valid {
+  outline: 0;
+  border-bottom: 4px solid var(--primary-color-d);
+}
+
+
+.form-container label {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+}
+.form-container label span {
+    display: inline-block;
+    color: var(--primary-color-d);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#container button {
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+#container button:hover {
+    background-color: #33658A;
+    transition: 0.5s;
+}
+
+#container p {
+    text-align: right;
+}
+#container > p > a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.form-container input:focus + label span,
+.form-container input:valid + label span {
+  transform: translateY(-20px);
+  color: var(--primary-color);
+}
