@@ -97,6 +97,7 @@ body {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
+    font-family: 'Play', sans-serif;
 }
 
 .form-container input:focus + label span,
